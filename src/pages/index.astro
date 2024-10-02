@@ -1,0 +1,29 @@
+---
+import DeveloperBio from '../components/DeveloperBio.astro'
+import ProfileSummary from '../components/ProfileSummary.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="João Silva - Desenvolvedor Fullstack ">
+	<div class="main-layout">
+		<header>
+			<div class="wrapper">
+				<ProfileSummary />
+			</div>
+		</header>
+		<main>
+			<section>
+				<div class="wrapper">
+					<DeveloperBio />
+				</div>
+			</section>
+		</main>
+		<footer></footer>
+	</div>
+</Layout>
+
+<style>
+	header {
+		margin-top: var(--space-xl);
+	}
+</style>

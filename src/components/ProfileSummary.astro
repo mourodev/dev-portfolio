@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets'
+import profile from '../assets/profile.jpeg'
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="container">
+	<div class="image-profile">
+		<Image
+			class="user-img"
+			src={profile}
+			width={150}
+			height={150}
+			alt="Profile"
+			format="avif"
+			loading={'eager'}
+		/>
+
+		<div>
+			<h1>João Silva</h1>
+			<p>Desenvolvedor Fullstack</p>
+			<p class="location"><Icon name="location" size={25} /> Brasilia, DF</p>
+		</div>
+	</div>
+</div>
+
+<style>
+	.image-profile {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--space-lg);
+	}
+	.image-profile h1 {
+		font-size: clamp(1.8rem, 4vw + 1rem, 3rem);
+		line-height: 1.2;
+		color: var(--text-color);
+	}
+	.user-img {
+		border-radius: 50%;
+	}
+
+	.location {
+		display: flex;
+		align-items: center;
+		gap: var(--space-sm);
+		margin-left: -3px;
+	}
+	@container (width > 400px) {
+		.image-profile {
+			grid-template-columns: auto 1fr;
+		}
+	}
+</style>
