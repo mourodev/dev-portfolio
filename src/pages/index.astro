@@ -2,6 +2,7 @@
 import DeveloperBio from '../components/DeveloperBio.astro'
 import DeveloperSkill from '../components/DeveloperSkill.astro'
 import ProfileSummary from '../components/ProfileSummary.astro'
+import Project from '../components/Project.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
@@ -23,7 +24,7 @@ import Layout from '../layouts/Layout.astro'
 				<div class="wrapper">
 					<h2>Tecnologias</h2>
 					<p>Estas sao as tecnologias que eu utilizo para desenvolver meus projetos.</p>
-					<div class="skills-grid">
+					<div class="container-grid">
 						<DeveloperSkill
 							title="Javascript"
 							body="Desenvolvo aplicações dinâmicas e interativas usando JavaScript puro e frameworks como React."
@@ -53,6 +54,45 @@ import Layout from '../layouts/Layout.astro'
 					</div>
 				</div>
 			</section>
+
+			<section>
+				<div class="wrapper">
+					<h2>Projetos</h2>
+					<p>Estes sao alguns dos projetos que eu fiz.</p>
+
+					<div class="container-grid">
+						<Project
+							href="#"
+							title="Editor de Vídeos com Intligencência Artificial"
+							body="Editor de vídeos com IA com Next.js e Styled Components e Tailwind CSS"
+							image="/project1.avif"
+						/>
+
+						<Project
+							href="#"
+							title=" SaaS"
+							body="Projeto SaaS com Next.js e Tailwind CSS"
+							image="/project2.avif"
+						/>
+
+						<Project
+							href="#"
+							title="Portfólio Developer Mininalista"
+							body="Moderno portfólio com Next.js, Tailwind CSS e Styled Components"
+							image="/project3.avif"
+						/>
+
+						<Project
+							href="#"
+							title="Portfólio Developer Mininalista"
+							body="Astro Build"
+							body="Tailwind CSS"
+							body="Styled Components"
+							image="/project3.avif"
+						/>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer>
@@ -69,7 +109,7 @@ import Layout from '../layouts/Layout.astro'
 			margin-top: var(--space-xl);
 		}
 
-		.skills-grid {
+		.container-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 			gap: var(--space-lg);
