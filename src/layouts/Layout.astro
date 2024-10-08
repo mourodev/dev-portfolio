@@ -1,8 +1,8 @@
 ---
 interface Props {
-	title: string;
+	title: string
 }
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
@@ -21,113 +21,113 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-  --bg-color: #171717;
-  --text-color: #f5f5f5;
-  --paragraph-color: #a3a3a3;
-  --primary-color: #2563eb;
+		--bg-color: #171717;
+		--text-color: #f5f5f5;
+		--paragraph-color: #a3a3a3;
+		--primary-color: #2563eb;
 
-  --border-color: #2f2f2f;
-  --card-color: #252525;
+		--border-color: #2f2f2f;
+		--card-color: #252525;
 
-  --font-primary: system-ui, sans-serif;
+		--font-primary: system-ui, sans-serif;
 
-  --font-size-base: 1rem;
-  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
-  --font-size-md: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-  --font-size-lg: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
-  --font-size-xl: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
-  --font-size-xxl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+		--font-size-base: 1rem;
+		--font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+		--font-size-md: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+		--font-size-lg: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+		--font-size-xl: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+		--font-size-xxl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
 
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 32px;
-  --space-xl: 64px;
+		--space-xs: 4px;
+		--space-sm: 8px;
+		--space-md: 16px;
+		--space-lg: 32px;
+		--space-xl: 64px;
 
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 16px;
-  --border-radius-xl: 9999px;
-}
+		--border-radius-sm: 4px;
+		--border-radius-md: 8px;
+		--border-radius-lg: 16px;
+		--border-radius-xl: 9999px;
+	}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
 
-* {
-  margin: 0;
-  padding: 0;
-}
+	* {
+		margin: 0;
+		padding: 0;
+	}
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: var(--font-primary);
-  background-color: var(--bg-color);
-  color: var(--paragraph-color);
-  font-family: var(--font-primary);
-  font-size: var(--font-size-base);
-  line-height: 1.5;
-  scroll-behavior: smooth;
-}
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-family: var(--font-primary);
+		background-color: var(--bg-color);
+		color: var(--paragraph-color);
+		font-family: var(--font-primary);
+		font-size: var(--font-size-base);
+		line-height: 1.5;
+		scroll-behavior: smooth;
+	}
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-section {
-  margin-bottom: var(--space-lg);
-}
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+	section {
+		margin-bottom: var(--space-lg);
+	}
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
 
-h2 {
-  font-size: var(--font-size-xl);
-  color: var(--text-color);
-  margin-bottom: var(--space-sm);
-}
-h3 {
-  font-size: var(--font-size-lg);
-  color: var(--text-color);
-  margin-bottom: var(--space-sm);
-}
+	h2 {
+		font-size: var(--font-size-xl);
+		color: var(--text-color);
+		margin-bottom: var(--space-sm);
+	}
+	h3 {
+		font-size: var(--font-size-lg);
+		color: var(--text-color);
+		margin-bottom: var(--space-sm);
+	}
 
-p {
-  font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
-  line-height: 1.5;
-}
-.container {
-  container-type: inline-size;
-}
-.wrapper {
-  width: min(100% - 4rem, 800px);
-  margin-inline: auto;
-}
-.main-layout {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
+	p {
+		font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+		line-height: 1.5;
+	}
+	.container {
+		container-type: inline-size;
+	}
+	.wrapper {
+		width: min(100% - 4rem, 800px);
+		margin-inline: auto;
+	}
+	.main-layout {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		gap: var(--space-lg);
+		min-height: 100vh;
+	}
 </style>

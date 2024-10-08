@@ -1,5 +1,6 @@
 ---
 import DeveloperBio from '../components/DeveloperBio.astro'
+import DeveloperSkill from '../components/DeveloperSkill.astro'
 import ProfileSummary from '../components/ProfileSummary.astro'
 import Layout from '../layouts/Layout.astro'
 ---
@@ -17,13 +18,62 @@ import Layout from '../layouts/Layout.astro'
 					<DeveloperBio />
 				</div>
 			</section>
-		</main>
-		<footer></footer>
-	</div>
-</Layout>
 
-<style>
-	header {
-		margin-top: var(--space-xl);
-	}
-</style>
+			<section>
+				<div class="wrapper">
+					<h2>Tecnologias</h2>
+					<p>Estas sao as tecnologias que eu utilizo para desenvolver meus projetos.</p>
+					<div class="skills-grid">
+						<DeveloperSkill
+							title="Javascript"
+							body="Desenvolvo aplicações dinâmicas e interativas usando JavaScript puro e frameworks como React."
+						/>
+						<DeveloperSkill
+							title="Python"
+							body="Utilizo Python para desenvolvimento backend e automação de tarefas, incluindo frameworks como Django e Flask."
+						/>
+						<DeveloperSkill
+							title="PHP"
+							body="Utilizo PHP para desenvolvimento backend e automação de tarefas, incluindo frameworks como Laravel."
+						/>
+						<DeveloperSkill
+							title="HTML e CSS"
+							body="Utilizo HTML e CSS para desenvolvimento frontend e design responsivo."
+						/>
+
+						<DeveloperSkill
+							title="Node.js"
+							body="Utilizo Node.js para desenvolvimento backend e automação de tarefas, incluindo frameworks como Express."
+						/>
+
+						<DeveloperSkill
+							title="Banco de Dados"
+							body="Utilizo MySQL e PostgreSQL para desenvolvimento backend e automação de tarefas."
+						/>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<section>
+				<div class="wrapper">
+					<h2>Footer</h2>
+				</div>
+			</section>
+		</footer>
+	</div>
+
+	<style>
+		header {
+			margin-top: var(--space-xl);
+		}
+
+		.skills-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			gap: var(--space-lg);
+			margin-top: var(--space-lg);
+		}
+	</style>
+</Layout>
