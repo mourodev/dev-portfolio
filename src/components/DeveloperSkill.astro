@@ -15,29 +15,16 @@ const { title, body } = Astro.props
 </div>
 
 <style>
-	.skills {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: var(--space-lg);
-	}
-
-	.skills div {
-		border-radius: var(--border-radius-md);
-	}
-	.skills ul {
-		list-style: none;
-	}
-
-	.skills h3 {
-		margin-top: var(--space-lg);
-	}
-
 	.skill-card {
 		background-color: var(--card-color);
 		border: 1px solid var(--border-color);
 		border-radius: var(--border-radius-md);
 		padding: var(--space-md);
 		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		transition:
 			transform 0.3s,
 			box-shadow 0.3s;
